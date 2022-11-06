@@ -8,30 +8,24 @@
 	</head>
 	<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
 
-        <center>
-          <h1>Add Post</h1>
+        <h1>All Post</h1>
 
-          <form method="POST" action="/add_post" enctype="multipart/form-data">
-          		<input type="text" name="caption" placeholder="Caption">
-				<input type="file" name="post_pic" placeholder="Photo" />
-          		<input type="submit" name="Submit">
-          </form>
-          
-
-        </center>
+        <div>
+            <h3>My post: {{post['caption']}}</h3>
+            <img src="static/images/pets/{{post['post_pic']}}">
+        </div>
+        
+        
 
 
-				<!-- Footer -->
 					<footer id="footer">
 						<p>&copy; MEET's (fake) Instagram. No rights reserved. 
 					</footer>
 
 			</div>
 
-		<!-- Scripts -->
+
 			<script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
 			<script src="static/js/jquery.poptrox.min.js"></script>
 			<script src="static/js/skel.min.js"></script>
